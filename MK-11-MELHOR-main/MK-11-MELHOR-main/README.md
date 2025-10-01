@@ -1,2 +1,0 @@
-# MK-11-MELHOR
-DIA 25/09
