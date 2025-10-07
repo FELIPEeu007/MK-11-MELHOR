@@ -1,330 +1,112 @@
-*{
-    padding: 0;
+/* Reset básico */
+* {
     margin: 0;
-    font-family: "Arial";
+    padding: 0;
     box-sizing: border-box;
-    color: white;
-
 }
 
-body{
-    width: 100%;
-    min-height: 100vh;
-
-}
-
-section{
-    width: 100%;
-    height: 100vh;
-    position: relative;
-    overflow-y: hidden;
-}
-
-section div.background-section{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    z-index: -1;
-}
-section div.background-section video {
-    width: 100%;
+/* Vídeo em background fullscreen */
+.video-background video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
     object-fit: cover;
-    object-position: center;
-    position: fixed;
-}
-section div.box{
-    width: 50%;
-    height: 100%;
-    position: relative;
-z-index: 1;
-background: linear-gradient(to rigth,rgba(0, 0, 0, 0.9), transparent );
-display: flex;
-align-items: center;
-justify-content: center;
-
+    z-index: -1;
 }
 
-section div.box div .conteudo{
-    width: 80%;
-}
-
-
-
-
-
-
-
-section div.box img{
-    width: 100%;
-    min-width: 300px;
-
-
-}
-section div.box p{
-    color: white;
-    font-size: 24px;
-    line-height: 32px;
-}
-
-@media screen and (max-width: 1024px){
-    section div.box{
-        width: 100%;
-      padding: 2%;
-    background: rgba(0, 0, 0, 0.4);
-    
-    }
-    
-    section div.box div .conteudo{
-        width: 100%;
-        text-align: center;
-
-    }
-    
-}
-html, body { height: 100%; }
-  body {
-    margin: 0;
-    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
-    background: linear-gradient(180deg, #0b1220 0%, var(--bg) 40%, #0b1220 100%);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  
-  header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    backdrop-filter: blur(6px);
-    border-bottom: 1px solid #0c0c0c;
-  }
-.container {
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 0 1rem;
-  }
-  
-  .topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.75rem 0;
-  }
-  nav a {
-    color: var(--muted);
-    text-decoration: none;
-    margin: 0 0.5rem;
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-  
-  nav a:hover, nav a:focus {
-    color: var(--accent);
-    outline: none;
-  }
-  
-  .hero {
-    padding: 3.5rem 0 2rem;
-    display: grid;
-    gap: 1.5rem;
-  }
-  
-  .title {
-    font-size: clamp(1.75rem, 2.5vw + 1rem, 3rem);
-    margin: 0;
-  }
-  
-  .subtitle {
-    color: var(--muted);
-    margin: 0.25rem 0 0;
-  }
-  
-  .card {
-    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-    border: 1px solid rgba(148, 163, 184, 0.15);
-    border-radius: 16px;
-    padding: 1.25rem;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-  }
-  
-  .grid { display: grid; gap: 1rem; }
-  
-  @media (min-width: 768px) {
-    .grid-2 { grid-template-columns: 1fr 1fr; }
-    .grid-3 { grid-template-columns: repeat(3, 1fr); }
-  }
-  
-  h2 {
-    margin-top: 1rem;
-    border-left: 4px solid var(--accent);
-    padding-left: 0.5rem;
-  }
-  
-  h3 { margin-top: 0.5rem; color: var(--accent-2); }
-  
-  ul { padding-left: 1.2rem; }
-  
-  a.link { color: var(--accent); }
-  
-  figure { margin: 0; }
-  
-  figcaption {
-    color: var(--muted);
-    font-size: 0.9rem;
-    margin-top: 0.35rem;
-  }
-  
-  table { width: 100%; border-collapse: collapse; }
-  
-  th, td {
-    border-bottom: 1px solid rgba(148,163,184,0.2);
-    padding: 0.6rem;
-    text-align: left;
-  }
-  
-  th { color: var(--accent-2); }
-  
-  footer {
-    margin-top: 2rem;
-    color: var(--muted);
-    border-top: 1px solid rgba(148,163,184,0.15);
-    padding: 1rem 0 2rem;
-    font-size: 0.95rem;
-  }
-  @media print {
-    header, .hero, nav, .no-print { display: none !important; }
-    body { background: white; color: black; }
-    .card { border: none; box-shadow: none; }
-    h2 { border-left-color: black; }
-    a { color: black; text-decoration: none; }
-  }
-  
-  .body{
-    background-color: #0077b3;
-    color: #0077b3;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-size:cover;
-    background-attachment: fixed;
-    background-position: center;
-}
+/* Corpo da página */
 body {
-    @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single+Ink:wght@100..900&display=swap');
-    font-family: 'Segoe UI', Tahoma, Bitcount Prop Single Ink, Verdana, sans-serif;
-    background-color: #0c0c0c;
-    color: #8d8d8d;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background-image: url('https://www.mortalkombat.com/static/mk11-home-bg.jpg');
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    position: relative;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: rgba(0, 0, 0, 0.6);
+    min-height: 100vh;
 }
-.container {
-    max-width: 900px;
-    margin: auto;
-    background-color: rgba(26, 26, 26, 0.95);
-    padding: 25px;
+
+/* Conteúdo com fundo escuro semi-transparente */
+header,
+section,
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 10px auto;
+    padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
-    margin-top: 20px;
+    max-width: 1100px;
+}
+
+/* Container para header */
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Topbar */
+.topbar strong {
+    color: #e50914;
+    font-size: 24px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+/* Títulos */
+h2 {
+    font-size: 28px;
     margin-bottom: 20px;
-                         }
-header {
+    color: #e50914;
+}
+
+/* Lista de personagens */
+.personagens-lista {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Card de personagem */
+article {
+    width: 250px;
     text-align: center;
-    padding-bottom: 20px;
 }
-header h1 {
-    font-size: 3em;
-    color: #ffd700;
-    text-shadow: 2px 2px 4px #000;
-    border-bottom: 2px solid #ffd700;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-.section-title2{
-    color: #fdfeff;
-    font-size: 2em;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #fdfeff;
-    padding-bottom: 5px;
-}
-.section-title {
-    color: #fdfdfd;
-    font-size: 2em;
-    margin-top: 30px;
-    border-bottom: 1px solid #fdfdfd;
-    padding-bottom: 5px;
-}
-.intro-text {
-    text-align: center;
-    font-size: 1.1em;
-    margin-bottom: 30px;
-}
-.character-selection {
-    text-align: center;
-    margin-bottom: 25px;
-}
-.character-button {
-    padding: 12px 25px;
-    font-size: 1.2em;
-    font-weight: bold;
-    cursor: pointer;
-    border: none;
-    border-radius: 50px;
-    margin: 0 15px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-.character-button:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-#subzero-btn {
-    background-color: #0077b3;
-    color: white;
-}
-#scorpion-btn {
-    background-color: #ccab17;
-    color: white;
-}
-.content {
-    display: none;
-    animation: fadeIn 1s ease-in-out;
-}
-.content1 h3 {
-    color: #fdfdfd;
-    border-left: 3px solid #fdfdfd;
-    padding-left: 10px;
-}
-.character-info2 img{
-    max-width: 100%;
-    height: auto;
+
+article img {
+    width: 100%;
     border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 10px #0077b3;
-}
-.character-info img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 10px #FFD700;
-}
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-li {
-    background-color: rgba(45, 45, 45, 0.8);
     margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
-  
 
+article h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #fff;
+}
 
+article p {
+    font-size: 14px;
+    color: #ccc;
+}
 
+/* Rodapé */
+footer {
+    text-align: center;
+    padding: 10px;
+}
 
+footer p {
+    color: #fff;
+    font-size: 14px;
+}
